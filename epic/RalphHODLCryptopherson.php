@@ -30,7 +30,7 @@
 			<ul>
 				<li>Feels overwhelmed by data of coins that are outside of his portfolio.</li>
 				<li>Some coins have inaccurate market data and vary by exchange.</li>
-				<li>Some coins aren't listed if there are fewer than 3 exchanges.</li>
+				<li>Some coins aren't listed if there are on fewer than 3 exchanges.</li>
 			</ul>
 		</div>
 
@@ -53,6 +53,7 @@
 				<li>Camera: Two 5MP webcams (1080p HD video)</li>
 				<li>Weight: 1.76 pounds</li>
 				<li>Size: 7.93 x 11.5 x 0.36 inches (W x D x H)</li>
+				</ul>
 			<h3>Phone</h3>
 		</div>
 
