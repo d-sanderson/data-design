@@ -7,9 +7,9 @@
 	<body>
 		<h1>Site Nav: </h1>
 			<p>
-				<a href="RalphHODLCryptopherson.php">Persona</a>
-				<a href="conceptual-model.php">Conceptual Model</a>
-				<a href="use-case.php">Conceptual Model</a>
+				<a href="RalphHODLCryptopherson.php">Persona</a> <br/>
+				<a href="conceptual-model.php">Conceptual Model</a> <br/>
+				<a href="use-case.php">Use-Case</a> <br/>
 			</p>
 
 	</body>
