@@ -10,31 +10,32 @@
 
 		<h2>Entities & Attributes</h2>
 		<div class="entities">
-			<h2>Cryptocurrencies:</h2>
+			<h2>Cryptocurrency:</h2>
 			<ul>
 				<li>currencyId</li>
-				<li>currencyIdMarketCap</li>
-				<li>currencyIdPrice</li>
-				<li>currencyIdVolume</li>
-				<li>currencyIdCircSupply</li>
-				<li>currencyIdChange</li>
+				<li>currencyMarketCap</li>
+				<li>currencyPrice</li>
+				<li>currencyVolume</li>
+				<li>currencyCircSupply</li>
+				<li>currencyChange</li>
 				<li>currencyPriceGraph</li>
 			</ul>
 		</div>
 
 
 		<div class="entities">
-			<h2>Exchanges</h2>
+			<h2>Exchange</h2>
 			<ul>
 				<li>exchangeId</li>
-				<li>exchangeIdAdjVolumeDay</li>
-				<li>exchangeIdVolumeDay</li>
-				<li>exchangeIdVolumeWeek</li>
-				<li>exchangeIdVolumeMonth</li>
-				<li>exchangeIdNumofMarkets</li>
-				<li>exchangeIdChange24h</li>
-				<li>exchangeIdVolGraph7D</li>
-				<li>exchangeIdDateOfLaunch</li>
+				<li>exchangeCurrency</li>
+				<li>exchangeAdjVolumeDay</li>
+				<li>exchangeVolumeDay</li>
+				<li>exchangeVolumeWeek</li>
+				<li>exchangeVolumeMonth</li>
+				<li>exchangeNumofMarkets</li>
+				<li>exchangeChangeDay</li>
+				<li>exchangeVolGraphWeek</li>
+				<li>exchangeDateOfLaunch</li>
 			</ul>
 		</div>
 
@@ -42,23 +43,22 @@
 		<h2>Watchlist</h2>
 		<ul>
 			<li>watchlistCurrencyId</li>
-			<li>watchlistCurrencyIdMarketCap</li>
-			<li>watchlistCurrencyIdPrice</li>
-			<li>watchlistCurrencyIdVolume24Hour</li>
-			<li>watchlistCurrencyIdCircSupply</li>
-			<li>watchlistCurrencyIdChange24Hour</li>
-			<li>watchlistCurrencyIdPriceGraph</li>
+			<li>watchlistCurrencyMarketCap</li>
+			<li>watchlistCurrencyPrice</li>
+			<li>watchlistCurrencyVolumeDay</li>
+			<li>watchlistCurrencyCircSupply</li>
+			<li>watchlistCurrencyChangeDay</li>
+			<li>watchlistCurrencyPriceGraph</li>
 		</ul>
-
 		</div>
 
 		<div class="relationships">
 			<h2>Relationships</h2>
 			<ul>
-				<li>One exchangeId may belong to multiple currencyIds</li>
-				<li>currencyId has a 1:1 relationship to currencyIdVolume</li>
-				<li>currencyId has a 1:1 relationship with currencyIdCircSupply</li>
-				<li>currencyId has a 1:1 relationship with currencyIdPrice</li>
+				<li>One cryptoCurrency may belong to many exchanges</li>
+				<li>one Watchlist may have multiple Cryptocurrencies </li>
+				<li>One Watchlist may have multiple Exchanges</li>
+				<li>One Exchange may have multiple cryptocurrencies.</li>
 			</ul>
 		</div>
 

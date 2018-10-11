@@ -1,3 +1,4 @@
-.pic {
-	object-fit: cover;
+img{
+	max-width:100%;
+	object-fit: scale-down;
 }
