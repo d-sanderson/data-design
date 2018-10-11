@@ -21,7 +21,7 @@
 			</p>
 			<p>
 				<strong>Name of user and their role:</strong>
-				Ralph; Part-time crypto trader who uses CoinMarketCap to stay informed of potential market opportunities.
+				Ralph; Part-time crypto trader who uses CoinMarketCap to stay on top of potential market opportunities.
 			</p>
 			<p>
 				<strong>Usage preconditions:</strong>
@@ -34,7 +34,7 @@
 		</div>
 		<div class="InteractionFlow">
 
-			<h2>Interaction Flow</h2>
+			<h2>Interaction Flow:</h2>
 
 			<ul>
 				<li>Ralph enters <a href="https://coinmarketcap.com/">CoinMarketCap.com</a> into his web browser.</li>

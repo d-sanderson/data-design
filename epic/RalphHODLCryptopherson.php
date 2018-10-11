@@ -2,22 +2,23 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styles.css">
 		<title>Persona</title>
 	</head>
 	<body>
 		<h1>User Persona: Ralph "Hodl" Cryptopherson</h1>
-		<img src="RalphHODLCryptopherson.jpg" alt="Ralph Crypto-Extraordinaire">
+		<img src="RalphHODLCryptopherson.jpg" alt="Ralph Crypto-Extraordinaire" class="pic">
 		<div class="bio">
 			<h2>About</h2>
 			<p>Name: Ralph "Hodl" Cryptopherson</p>
 			<p>Gender: Male</p>
 			<p>Age: 29</p>
 			<p>Marital Status: Single</p>
-			<p>Occupation: Sales Representative @ Geico</p>
+			<p>Occupation: Inside Sales Representative @ Geico</p>
 		</div>
 
 		<div class="needs">
-			<h2>Needs</h2>
+			<h2>Needs:</h2>
 			<ul>
 				<li>Needs the most important data to be on the top of the page.</li>
 				<li>Needs to be able to perform a market assessment in >15 minutes.</li>
@@ -26,7 +27,7 @@
 		</div>
 
 		<div class="frustrations">
-			<h2>Frustrations</h2>
+			<h2>Frustrations:</h2>
 			<ul>
 				<li>Feels overwhelmed by amount of data & coins that are outside of his portfolio.</li>
 				<li>Some coins have inaccurate market data and vary by exchange.</li>
@@ -35,12 +36,12 @@
 		</div>
 
 		<div class="goals">
-			<h2>Goals</h2>
-			<p>Ralph wants to build his cr</p>
+			<h2>Goals:</h2>
+			<p>Ralph wants to build his crypto portfolio gradually by dollar cost averaging during market depressions.</p>
 		</div>
 
 		<div class="Tech">
-			<h2>Technology</h2>
+			<h2>Technology:</h2>
 			<h3>Laptop: Surface Pro 2015</h3>
 				<ul>
 					<li>CPU: 1.9GHz Intel Core i5-4300U (dual-core, 3MB cache, up to 2.9GHz with Turbo Boost)</li>
