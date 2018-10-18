@@ -18,3 +18,4 @@ SELECT currencyChange, currencyCircSupply, currencyMarketCap FROM currency WHERE
 SELECT exchange.exchangeId, exchange.exchangeCurrency, exchange.exchangeAdjVolumeDay, exchange.exchangeChangeDay from exchange inner join currency on currency.currencyId = exchange.exchangeId where currencyId = unhex("9fbbf860d0c711e8a8d5f2801f1b9fd1");
 -- Write a select statement based of off DDC-Twitter that counts the number of likes for a specific tweet.
 
+SELECT COUNT(likeProfileId) FROM `like` WHERE `like`.likeTweetId = "851d8c88d19111e8a8d5f2801f1b9fd1";

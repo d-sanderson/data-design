@@ -2,14 +2,14 @@
 ALTER DATABASE dsanderson3 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 DROP TABLE IF EXISTS watchlist;
-DROP TABLE IF EXISTS cryptocurrency;
+DROP TABLE IF EXISTS currency;
 DROP TABLE IF EXISTS exchange;
 
 CREATE TABLE currency (
 
+	currencyId BINARY(16) NOT NULL,
 	currencyChange FLOAT NOT NULL,
 	currencyCircSupply BIGINT NOT NULL,
-	currencyId VARCHAR(32) NOT NULL,
 	currencyMarketCap BIGINT,
 	currencyPrice BIGINT NOT NULL,
 	currencyPricegraph INT NOT NULL,
@@ -24,9 +24,9 @@ CREATE TABLE exchange (
 
 	exchangeAdjVolumeDay BIGINT NOT NULL,
 	exchangeChangeDay FLOAT NOT NULL,
-	exchangeCurrency VARCHAR(32) NOT NULL,
+	exchangeCurrency BINARY(16) NOT NULL,
 	exchangeDateOfLaunch DATE NOT NULL,
-	exchangeId VARCHAR(32) NOT NULL,
+	exchangeId BINARY(16) NOT NULL,
 	exchangeNumofMarkets BIGINT NOT NULL,
 	exchangeVolumeDay BIGINT NOT NULL,
 	exchangeVolGraphWeek BIGINT NOT NULL,
@@ -41,17 +41,19 @@ CREATE TABLE exchange (
 
 
 CREATE TABLE watchlist (
+	watchlistCurrencyId BINARY(16) NOT NULL,
+	watchlistExchangeId BINARY(16) NOT NULL,
 	watchlistCurrencyChangeDay INT,
 	watchlistCurrencyCircSupply BIGINT,
-	watchlistCurrencyId VARCHAR(32) NOT NULL,
 	watchlistCurrencyMarketCap BIGINT,
 	watchlistCurrencyPrice BIGINT NOT NULL,
 	watchlistCurrencyPriceGraph FLOAT,
 	watchlistCurrencyVolumeDay BIGINT,
-	watchlistExchangeId VARCHAR(32) NOT NULL,
 
 
 
+	INDEX(watchlistCurrencyId);
+	INDEX(watchlistExchangeId);
 
 	FOREIGN KEY(watchlistCurrencyId) REFERENCES currency(currencyId),
 	FOREIGN KEY(watchlistExchangeId) REFERENCES exchange(exchangeId),
