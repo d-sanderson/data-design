@@ -82,7 +82,7 @@ use Ramsey\Uuid\Uuid;
 	}
 
 	/**
-	 * accessor (getter) method for currency id
+	 * accessor/getter method for currency id
 	 *
 	 * @return Uuid value for currency id
 	 */
@@ -135,7 +135,7 @@ public function setCurrencyChange(float $newCurrencyChange) : void {
 }
 
 	 /**
-	  * accessor getter method for currency change
+	  * accessor/getter method for currency change
 	  * @return float value of currency change
 	  *
 	  */
@@ -157,15 +157,17 @@ public function setCurrencyChange(float $newCurrencyChange) : void {
 
 
 	 /**
-	  *  getter for Currency Market Cap
+	  *  accessor/getter for Currency Market Cap
 	  * @return float for Currency Market Cap
 	  */
-	 public function getCurrencyMarketCap() {
+	 public function getCurrencyMarketCap(): float {
 		 return $this->currencyMarketCap;
 	 }
 
 	 /**
-	  * @param mixed $currencyMarketCap
+	  * mutator/setter for $currencyMarketCap
+	  * @param float \ $currencyCircSupply sets new value for Currency Circulating Supply
+	  * @throws \RangeException if $currencyCircSupply is negative or out of range.
 	  */
 	 public function setCurrencyMarketCap($currencyMarketCap): void {
 		 if($currencyMarketCap < 0.0 || $currencyMarketCap > 100000000000000.00) {
@@ -175,18 +177,18 @@ public function setCurrencyChange(float $newCurrencyChange) : void {
 	 }
 
 	 /**
-	  * @return mixed
+	  *  accessor/getter for Currency Market Price
+	  * @return float for Currency Market Price
 	  **/
 
-	 public function getCurrencyPrice() {
+	 public function getCurrencyPrice(): float {
 		 return $this->currencyPrice;
 	 }
 	 /**
-	  * @return mixed
-	  */
-	 /**
-	  * @param mixed $currencyPrice
-	  */
+	  * mutator/setter for Currency Price
+	  * @param float \  sets new value for Currency Price
+	  * @throws \RangeException if Currency Price is negative or out of range.
+	  **/
 	 public function setCurrencyPrice($currencyPrice): void {
 		 if($currencyPrice < 0.0 || $currencyPrice > 100000000000000.00) {
 			 throw(new \RangeException("Currency Price is negative or out of range"));
@@ -195,30 +197,41 @@ public function setCurrencyChange(float $newCurrencyChange) : void {
 	 }
 
 	 /**
-	  * @return mixed
-	  */
-	 public function getCurrencyPricegraph() {
+	  *  accessor/getter for Currency Price Graph
+	  * @return float for Currency Price Graph
+	  **/
+	 public function getCurrencyPricegraph():float {
 		 return $this->currencyPricegraph;
 	 }
 
 	 /**
-	  * @param mixed $currencyPricegraph
-	  */
-	 public function setCurrencyPricegraph($currencyPricegraph): void {
-		 $this->currencyPricegraph = $currencyPricegraph;
+	  * mutator/setter for Currency Price Graph
+	  * @param float \ $currencyCircSupply sets new value for Currency Price Graph
+	  * @throws \RangeException if Currency Price Graph is negative or out of range.
+	  **/
+	 public function setCurrencyPriceGraph($currencyPriceGraph): void {
+		 if($currencyPriceGraph < 0.0 || $currencyPriceGraph > 100000000000000.00) {
+			 throw(new \RangeException("Currency Price Graph is negative or out of range"));
+		 }
+		 $this->currencyPricegraph = $currencyPriceGraph;
 	 }
 	 /**
-	  * @return mixed
+	  *  accessor/getter for Currency Volume
+	  * @return float for Currency Volume
 	  **/
-	 public function getCurrencyVolume() {
+	 public function getCurrencyVolume() : float {
 		 return $this->currencyVolume;
 	 }
 
 	 /**
-	  * @param mixed $currencyVolume
+	  * mutator/setter for Currency Volume
+	  * @param float \ sets new value for Currency Volume
+	  * @throws \RangeException if Currency Volume is negative or out of range.
 	  **/
-
 	 public function setCurrencyVolume($currencyVolume): void {
+		 if($currencyVolume < 0.0 || $currencyVolume > 100000000000000.00) {
+			 throw(new \RangeException("Currency Volume is negative or out of range"));
+		 }
 		 $this->currencyVolume = $currencyVolume;
 	 }
 
