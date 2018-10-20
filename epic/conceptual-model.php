@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styles.css">
 		<title>Conceptual Model</title>
 	</head>
 	<body>
@@ -10,7 +11,7 @@
 
 		<h2>Entities & Attributes</h2>
 		<div class="entities">
-			<h2>Cryptocurrency:</h2>
+			<h2>Currency:</h2>
 			<ul>
 				<li>currencyId</li>
 				<li>currencyMarketCap</li>
@@ -43,6 +44,7 @@
 		<h2>Watchlist</h2>
 		<ul>
 			<li>watchlistCurrencyId</li>
+			<li>watchlistExchangeId</li>
 			<li>watchlistCurrencyMarketCap</li>
 			<li>watchlistCurrencyPrice</li>
 			<li>watchlistCurrencyVolumeDay</li>
@@ -55,12 +57,16 @@
 		<div class="relationships">
 			<h2>Relationships</h2>
 			<ul>
-				<li>One cryptoCurrency may belong to many exchanges</li>
+				<li>One Currency may belong to many exchanges</li>
 				<li>one Watchlist may have multiple Cryptocurrencies </li>
 				<li>One Watchlist may have multiple Exchanges</li>
 				<li>One Exchange may have multiple cryptocurrencies.</li>
 			</ul>
 		</div>
+
+
+		<div class="container"></div>
+
 
 		<a href="use-case.php">Back</a> <br/>
 		<a href="index.php">Return to Home Page</a>
