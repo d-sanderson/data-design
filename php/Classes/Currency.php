@@ -238,4 +238,6 @@ public function setCurrencyChange(float $newCurrencyChange) : void {
 }
 
 
+
+
 ?>
