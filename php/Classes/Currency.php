@@ -334,6 +334,39 @@ $statement->execute($parameters);
 		 return($currency);
 	 }
 
+/**
+ * gets all Currencies
+ *
+ *
+ *
+ */
+
+public static function getAllCurrencies(\PDO $pdo) : \SplFixedArray {
+	//create query template
+	$query = "SELECT currencyID, currencyChange, currencyCircSupply, currencyMarketCap, currencyPrice, currencyPriceGraph, currencyVolume from currency";
+	$statement = $pdo->prepare($query);
+	$statement->execute();
+
+	//build an array of currencies
+	$currencies = new \SplFixedArray($statement->rowCount());
+	$statement->setFetchMode(\PDO::FETCH_ASSOC);
+	while(($row = $statement ->fetch()) !==false) {
+		try {
+			$currency = new Currency($row["currencyId"], $row["currencyChange"], $row["currencyCircSupply"], $row["currencyMarketCap"], $row["currencyPrice"], $row["currencyPriceGraph"],$row["currencyVolume"]);
+			$currencies[$currencies->key()] = $currency;
+			$currencies->next();
+		} catch(\Exception $exception) {
+			//if the row couldn't be converted, rethrow it
+			throw(new \PDOException($exception->getMessage(),0,$exception));
+		}
+	}
+	return($currencies);
+
+
+
+
+
+}
 
 
 
