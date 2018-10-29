@@ -365,7 +365,7 @@ public static function getAllCurrencies(\PDO $pdo) : \SplFixedArray {
 }
 
 public function jsonSerialize() : array{
-	// TODO: Implement jsonSerialize() method.
+	
 	$fields = get_object_vars($this);
 
 	$fields["currencyId"] = $this->currencyId->toString();
