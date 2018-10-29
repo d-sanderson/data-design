@@ -15,7 +15,7 @@ require_once(dirname(__DIR__, 2) . "/vendor/autoload.php");
 use Ramsey\Uuid\Uuid;
 
 
- class Currency  {
+ class Currency implements \JsonSerializable {
 
 	 use ValidateUuid;
 
@@ -362,13 +362,16 @@ public static function getAllCurrencies(\PDO $pdo) : \SplFixedArray {
 	}
 	return($currencies);
 
+}
 
+public function jsonSerialize() : array{
+	// TODO: Implement jsonSerialize() method.
+	$fields = get_object_vars($this);
 
+	$fields["currencyId"] = $this->currencyId->toString();
 
 
 }
-
-
 
 
 	 //END OF CURRENCY CLASS
